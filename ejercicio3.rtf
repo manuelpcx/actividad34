@@ -1,0 +1,21 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf400
+{\fonttbl\f0\fnil\fcharset0 AndaleMono;}
+{\colortbl;\red255\green255\blue255;\red47\green255\blue18;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c15686\c99608\c7843;\csgray\c0\c66594;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf2 \cb3 \CocoaLigature0 publicaciones=# CREATE DATABASE colegio;\
+CREATE DATABASE\
+colegio=# CREATE TABLE aula(id SERIAL primary key, numero_de_aula INTEGER);\
+CREATE TABLE\
+colegio=# CREATE TABLE asignaturas(id SERIAL primary key, asignatura VARCHAR(50), aula_id INTEGER references aula);\
+CREATE TABLE\
+colegio=# CREATE TABLE profesores(id SERIAL primary key, nombre VARCHAR(50), edad INTEGER, part_time BOOLEAN, full_time BOOLEAN);\
+CREATE TABLE\
+colegio=# CREATE TABLE prof_asignatura(id SERIAL, porfesor_id INTEGER references profesores, asignatura_id INTEGER references asignaturas);\
+CREATE TABLE\
+colegio=# CREATE TABLE cursos(id SERIAL primary key, nombre_curso VARCHAR(50), asignatura_id INTEGER references asignaturas);\
+CREATE TABLE\
+colegio=# CREATE TABLE alumnos(id SERIAL primary key, nombre VARCHAR(50), edad INTEGER, curso_id INTEGER references cursos);\
+CREATE TABLE}
